@@ -18,15 +18,15 @@ def setpantilt(x,y):
 
 ser = serial.Serial()
 
-'''setup()
+setup()
 
 setpantilt(0,0)
 print('nu 1')
 time.sleep(10)
 setpantilt(20,0)
-print('nu 2')'''
+print('nu 2')
 
-'''print("send @")
+print("send @")
 ser.write(bytearray([64]))
 time.sleep(1)
 
@@ -51,9 +51,9 @@ time.sleep(1)
 
 for pos in range (10,150,5):
     ser.write(bytearray([49,pos]))
-    time.sleep(0.1)'''
+    time.sleep(0.1)
 
-'''for pos in range(0,360,10):
+for pos in range(0,360,10):
     ser.write(bytearray([48,bytes (150*(1+math.cos(3.14*pos/180)))]))
     ser.write(bytearray([49,bytes (150*(1+math.sin(3.14*pos/180)))]))
-    time.sleep(0.1)'''
+    time.sleep(0.1)
