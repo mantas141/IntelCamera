@@ -28,3 +28,28 @@ def ping():
         ser.write('@'.encode('ascii'))
         readresponse()
 
+def setpantilt(x,y):
+        ser.write(bytearray([115, x])) #First servo s - 115
+        ser.write(bytearray[100, y]) #First servo d - 100
+
+print("Testing the servos movement")
+
+print("Both servos position 0")
+setpantilt(0,0)
+time.sleep(5)
+
+print("First servo position to 10")
+setpantilt(10,0)
+time.sleep(1)
+
+print("Position 10")
+ser.write(bytearray([115,10]))
+time.sleep(1)
+
+print("Position 120")
+ser.write(bytearray([115,120]))
+time.sleep(1)
+
+print("2nd position 50")
+ser.write(bytearray[100,50])
+time.sleep(1)
