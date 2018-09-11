@@ -6,7 +6,7 @@ import math
 ser = serial.Serial()
 
 ser.baudrate = 115200
-ser.port = 'COM4'
+ser.port = 'COM3'
 ser.open()
 
 # Servo No.1 PWM pin should be on pin2
