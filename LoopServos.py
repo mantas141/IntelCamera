@@ -6,10 +6,10 @@ import numpy as np
 # importing datetime class from datetime library
 from datetime import datetime
 
-import tiltpan
+import servoc
 
-tiltpan.setup()
-tiltpan.setpantilt(90,20)  # 0..180, 0..60
+servoc.setup()
+servoc.setpantilt(90, 20)  # 0..180, 0..60
 time.sleep(2)
 
 tilteastwest = 90
@@ -107,7 +107,7 @@ while True:
            if tilteastwest>20:
                tilteastwest -= 20
                print('West 1 ' + str(tilteastwest))
-               tiltpan.setpantilt(tilteastwest, tiltnorthsouth)
+               servoc.setpantilt(tilteastwest, tiltnorthsouth)
            print('West 2 ' + str(tilteastwest))
            time.sleep(actiontime)
        if (x < 100):
@@ -116,7 +116,7 @@ while True:
            if tilteastwest<160:
                tilteastwest += 20
                print('East 1 ' + str(tilteastwest))
-               tiltpan.setpantilt(tilteastwest, tiltnorthsouth)
+               servoc.setpantilt(tilteastwest, tiltnorthsouth)
            print('East 2 ' + str(tilteastwest))
            time.sleep(actiontime)
 
@@ -126,7 +126,7 @@ while True:
            if (tiltnorthsouth < 60):
                tiltnorthsouth += 10
                print('tilt 8 ' + str(tiltnorthsouth))
-               tiltpan.setpantilt(tilteastwest, tiltnorthsouth)
+               servoc.setpantilt(tilteastwest, tiltnorthsouth)
                time.sleep(actiontime)
            print('North 2 ' + str(tiltnorthsouth))
 
@@ -136,7 +136,7 @@ while True:
            if (tiltnorthsouth > 10):
                tiltnorthsouth -= 10
                print('tilt 11 ' + str(tiltnorthsouth))
-               tiltpan.setpantilt(tilteastwest, tiltnorthsouth)
+               servoc.setpantilt(tilteastwest, tiltnorthsouth)
                time.sleep(actiontime)
            print('South 2 ' + str(tiltnorthsouth))
 

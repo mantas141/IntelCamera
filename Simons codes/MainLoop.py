@@ -5,11 +5,10 @@ import cv2, time, pandas
 import numpy as np
 # importing datetime class from datetime library
 from datetime import datetime
-
 import tiltpan
 
 tiltpan.setup()
-tiltpan.setpantilt(90,20)  # 0..180, 0..60
+tiltpan.setpantilt(90, 20)  # 0..180, 0..60
 time.sleep(2)
 
 tilteastwest = 90
